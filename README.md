@@ -18,6 +18,11 @@ The website that exposes this battle search feature is located at [Wows Battle T
 - [Warranty](#warranty)
 - [Credits](#credits)
 
+## .NET 7.0 Runtime
+
+This agent requires the .NET 7.0 runtime on the target computer. If you do not already have it, you will be prompted d
+during the installation of the service. Simply download the installer and follow the instructions.
+
 ## Installation
 
 To install this project, you will need to download the latest version of the installer from below on this page.
@@ -53,9 +58,9 @@ As a background Windows Service, there is nothing you need to do after the initi
 
 To download a specific file from this repository, you can click on the following link:
 
-[BattleTrackerAgent-1.0.0.5.msi](https://github.com/CoryGM/wows-battle-tracker-downloads/tree/main/Downloads/BattleTrackerAgent-1.0.0.5.msi)
+[BattleTrackerAgent-1.0.0.7.msi](https://github.com/CoryGM/wows-battle-tracker-downloads/tree/main/Downloads/BattleTrackerAgent-1.0.0.7.msi)
 
-SHA256 Checksum: 9764b96bf346aec449da44ed99ec14985cb7638202596287cc8ebbdbb4943a68
+SHA256 Checksum: 18a37c38ba6608d5e3571a2af9ee5b0f924eefa6b481740fb52f57c674af4711
 
 After you click on the link, it will take you to a page displaying the contents of the file. To download the file, click on the "Raw" button at the top of the file, then right click and select "Save As" to save the file to your desired location.
 
