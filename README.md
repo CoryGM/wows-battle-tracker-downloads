@@ -7,7 +7,7 @@ monitors the World of Warships game directory for new game information. That
 game information is sent to the cloud service where it is stored in a 
 searchable database. 
 
-The website that exposes this battle search feature is located at [Wows Battle Tracker](https://wows-battle-tracker.calmwater-da218019.centralus.azurecontainerapps.io/).
+The website that exposes this battle search feature is located at [Wows Battle Tracker](https://www.wows-battle-tracker.com/).
 
 ## Table of Contents
 
