@@ -58,9 +58,9 @@ As a background Windows Service, there is nothing you need to do after the initi
 
 To download a specific file from this repository, you can click on the following link:
 
-[BattleTrackerAgent-1.0.0.7.msi](https://github.com/CoryGM/wows-battle-tracker-downloads/tree/main/Downloads/BattleTrackerAgent-1.0.0.7.msi)
+[BattleTrackerAgent-2.0.2.1.msi](https://github.com/CoryGM/wows-battle-tracker-downloads/tree/main/Downloads/BattleTrackerAgent-2.0.2.1.msi)
 
-SHA256 Checksum: 18a37c38ba6608d5e3571a2af9ee5b0f924eefa6b481740fb52f57c674af4711
+MD5 Checksum: BC2A35531AB781ACD75B7110DA6E60AD
 
 After you click on the link, it will take you to a page displaying the contents of the file. To download the file, click on the "Raw" button at the top of the file, then right click and select "Save As" to save the file to your desired location.
 
