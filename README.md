@@ -2,67 +2,63 @@
 
 ## Overview
 
-This project is the Windows Service component that runs in the background and
-monitors the World of Warships game directory for new game information. That 
-game information is sent to the cloud service where it is stored in a 
-searchable database. 
+The Battle Tracker agent is a Windows service that runs on the PC where you play World of Warships. When a battle
+starts, it reads the battle information the game writes to its replays folder and sends it to
+[Wows Battle Tracker](https://www.wows-battle-tracker.com/), where it's stored and can be searched. Nothing else on
+your PC is read or sent.
 
-The website that exposes this battle search feature is located at [Wows Battle Tracker](https://www.wows-battle-tracker.com/).
+The same instructions are on the site's [Get the agent](https://www.wows-battle-tracker.com/agent) page.
 
 ## Table of Contents
 
+- [Download](#download)
 - [Installation](#installation)
-- [Start Service Manually](#start-service-manually)
-- [Usage](#usage)
-- [Download Instructions](#download-instructions)
+- [Start the service](#start-the-service)
+- [Removing it](#removing-it)
+- [Questions and data requests](#questions-and-data-requests)
 - [Warranty](#warranty)
 - [Credits](#credits)
 
-## .NET 7.0 Runtime
+## Download
 
-This agent requires the .NET 7.0 runtime on the target computer. If you do not already have it, you will be prompted d
-during the installation of the service. Simply download the installer and follow the instructions.
+[BattleTrackerAgent-2.0.2.1.msi](https://github.com/CoryGM/wows-battle-tracker-downloads/raw/main/Downloads/BattleTrackerAgent-2.0.2.1.msi)
+(29 MB)
+
+MD5 checksum: `BC2A35531AB781ACD75B7110DA6E60AD`
+
+The link downloads the installer directly.
 
 ## Installation
 
-To install this project, you will need to download the latest version of the installer from below on this page.
+The agent needs 64-bit Windows. It's built on .NET 10, and the runtime is included in the installer, so there's
+nothing else to install first.
 
-Once downloaded, click on the file and choose "Install".
+1. Open the downloaded file and choose **Install**.
+2. If World of Warships isn't installed in `C:\Games\World_of_Warships`, tell the agent where it is. Open
+   `C:\Program Files\WowsBattleTracker\BattleTrackerAgent\appsettings.json` in a text editor and change
+   `"WowsDirectory"` to your game folder, with double backslashes between folders, for example
+   `"D:\\Games\\World_of_Warships"`.
 
-If you have installed World of Warships in the default directory, you are all set to go.
+## Start the service
 
-If you have installed it in another location, you will need to tell the service where it is located. To do this
+The installer sets the service to start with Windows, but doesn't start it. Restart your PC, or start it now:
 
-Find the World of Warships main installation directory. For example, the default installation will put it here: c:\Games\World_of_Warships.
+1. Press the Windows key, type **Services** and open it.
+2. Find **Wows Battle Tracker Agent**, right-click it and choose **Start**.
 
-Now find the configuration file for the Wow Battle Tracker Agent. The default location for this file is at:
-c:\Program Files\WowsBattleTracker\BattleTrackerAgent\appsettings.json.
+Its status changes to "Running". You only need to do this once. After that, play a battle, and it shows up on the
+site's dashboard a few seconds after the battle starts.
 
-Open this file with your favorite text editor. Find the line that currently contains "WowsDirectory": "C:\\\\Games\\\\World_of_Warships". Replace the default directory location with the actual location of World of Warships you found earlier. You will need to include double slashes (\\\\) in the path to separate directories instead of single slashes.
+## Removing it
 
-## Start Service Manually
+Uninstall **BattleTracker Agent** from Windows Settings > Apps, like any other program. The service is removed with it.
 
-The agent is installed as a background Windows Service. It will start automatically the next time your computer is restarted.
+## Questions and data requests
 
-If you wish to start the service right away, you can do so through the Services Control Panel in Windows. To access Services, hit the Windows Key and type in Services. You will see a result titled "Services" with double gears meshing icon. Click that and you get the list
-of services currently running on your computer. 
-
-Find the "Wows Battle Tracker Agent", right-click on it, and select "Start". If the service starts without error, you will see its 
-status change to "Running" in the Control Panel.
-
-## Usage
-
-As a background Windows Service, there is nothing you need to do after the initial installation and setup. The service will silently run in the background and send the battle information to the cloud service. 
-
-## Download Instructions
-
-To download a specific file from this repository, you can click on the following link:
-
-[BattleTrackerAgent-2.0.2.1.msi](https://github.com/CoryGM/wows-battle-tracker-downloads/tree/main/Downloads/BattleTrackerAgent-2.0.2.1.msi)
-
-MD5 Checksum: BC2A35531AB781ACD75B7110DA6E60AD
-
-After you click on the link, it will take you to a page displaying the contents of the file. To download the file, click on the "Raw" button at the top of the file, then right click and select "Save As" to save the file to your desired location.
+Open an issue in this repository for questions about the agent or the site, or to have your account deleted.
+Issues are public, so please don't include your email address or other personal details. See the site's
+[Privacy Policy](https://www.wows-battle-tracker.com/privacy-policy) and
+[Data Deletion Policy](https://www.wows-battle-tracker.com/data-deletion-policy).
 
 ## Warranty
 
